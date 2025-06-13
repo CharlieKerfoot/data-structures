@@ -12,13 +12,13 @@ I take a lot of design liberties, but the general premise is the same regardless
 
 | Data Structure | Description |
 |----------------|-------------|
-| Graph          | A collection of vertices connected by edges |
-| Hash Map       | An unordered array with O(n) lookup |
-| Heap           | A tree with strict min-first or max-first ordering |
-| Linked List    | A sequential collection of items |
-| Queue          | A sequence of items adhering to the First-In-First-Out (FIFO) principle |
-| Stack          | A sequence of items adhering to the Last-In-First-Out (LIFO) principle |
-| Tree           | A series of nodes connected vertically as branches |
+| [Graph](https://github.com/CharlieKerfoot/data-structures/tree/main/graph)          | A collection of vertices connected by edges |
+| [Hash Map](https://github.com/CharlieKerfoot/data-structures/tree/main/hash_map)       | An unordered array with O(n) lookup |
+| [Heap](https://github.com/CharlieKerfoot/data-structures/tree/main/heap)           | A tree with strict min-first or max-first ordering |
+| [Linked List](https://github.com/CharlieKerfoot/data-structures/tree/main/linked_list)    | A sequential collection of items |
+| [Queue](https://github.com/CharlieKerfoot/data-structures/tree/main/queue)          | A sequence of items adhering to the First-In-First-Out (FIFO) principle |
+| [Stack](https://github.com/CharlieKerfoot/data-structures/tree/main/stack)          | A sequence of items adhering to the Last-In-First-Out (LIFO) principle |
+| [Tree](https://github.com/CharlieKerfoot/data-structures/tree/main/tree)           | A series of nodes connected vertically as branches |
 
 ## Tests
 
