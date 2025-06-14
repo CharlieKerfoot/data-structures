@@ -34,17 +34,19 @@ void resize_heap(heap *h) {
 	}
 
 	value** tmp_arr = h->vals;
-	int old_count = h->count;
 	h->size *= 2;
 	h->vals = malloc(sizeof(value*) * (h->size+1));
-	h->count = 0;
 
 	if (!h->vals) {
 		throw_error("Memory Allocation Failed");
 	}
 
-	for (int i=1; i<=old_count; i++) {
-		insert_heap(h, tmp_arr[i]);
+	for (int i=1; i<=h->count; i++) {
+		h->vals[i] = tmp_arr[i];
+	}
+
+	for (int i=h->count/2; i>=1; i--) {
+		bubble_down(h, i);
 	}
 
 	free(tmp_arr);
@@ -82,18 +84,8 @@ value *peek_heap(heap *h) {
 	return h->vals[1];
 }
 
-value *pop_heap(heap *h) {
-	if (!h || !h->vals || h->count == 0) {
-		throw_error("Heap Does Not Exist");
-	}
-	
-	value *min_val = h->vals[1];
-	h->vals[1] = h->vals[h->count];
-	h->vals[h->count] = NULL;
-	h->count--;
-
-	int curr_idx = 1;
-	//bubble down
+void bubble_down(heap *h, int idx) {
+	int curr_idx = idx;
 	while (1) {
 		int left = curr_idx * 2;
 		int right = curr_idx * 2 + 1;
@@ -110,6 +102,19 @@ value *pop_heap(heap *h) {
 
 		curr_idx = smallest;
 	}
+}
+
+value *pop_heap(heap *h) {
+	if (!h || !h->vals || h->count == 0) {
+		throw_error("Heap Does Not Exist");
+	}
+	
+	value *min_val = h->vals[1];
+	h->vals[1] = h->vals[h->count];
+	h->vals[h->count] = NULL;
+	h->count--;
+
+	bubble_down(h, 1);
 
 	return min_val;
 }

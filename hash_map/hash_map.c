@@ -154,6 +154,8 @@ void rehash(hashmap *map) {
 				bucket = next;
 			}
 	}
+
+	free(tmp_arr);
 }
 
 void print_map(hashmap *map) {
