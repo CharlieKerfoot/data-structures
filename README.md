@@ -13,7 +13,7 @@ I take a lot of design liberties, but the general premise is the same regardless
 | Data Structure | Description |
 |----------------|-------------|
 | [Graph](https://github.com/CharlieKerfoot/data-structures/tree/main/graph)          | A collection of vertices connected by edges |
-| [Hash Map](https://github.com/CharlieKerfoot/data-structures/tree/main/hash_map)       | An unordered array with O(n) lookup |
+| [Hash Map](https://github.com/CharlieKerfoot/data-structures/tree/main/hash_map)       | An unordered array with O(1) lookup |
 | [Heap](https://github.com/CharlieKerfoot/data-structures/tree/main/heap)           | A tree with strict min-first or max-first ordering |
 | [Linked List](https://github.com/CharlieKerfoot/data-structures/tree/main/linked_list)    | A sequential collection of items |
 | [Queue](https://github.com/CharlieKerfoot/data-structures/tree/main/queue)          | A sequence of items adhering to the First-In-First-Out (FIFO) principle |
