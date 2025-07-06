@@ -1,6 +1,6 @@
 ## Overview
 
-A Hash Map is a an array of strings or other data types with O(n) lookup by assigning strings to a unique index through the use of a pre-defined hash function.
+A Hash Map is a an array of strings or other data types with O(1) lookup by assigning strings to a unique index through the use of a pre-defined hash function.
 
 The goal of a hash function is too assign each input string a unique index, however as the size of the array decreases, making a perfect hash function in nearly impossible. As a result, hash maps have to build in support for handling hash collisions (when two strings map to the same index). Usually this is done through Open Adressing, Separate Chaining, and sometimes Cuckoo Hashing.
 
